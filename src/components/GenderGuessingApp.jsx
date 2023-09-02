@@ -16,7 +16,9 @@ function GenderGuessingApp() {
   const handleGuessGender = async (e) => {
     e.preventDefault();
     if (name.length > 0) {
-      const names = name.split(",");
+      const names = name.split(",").map((item) => {
+        return item.trim();
+      });
 
       try {
         const results = await Promise.all(

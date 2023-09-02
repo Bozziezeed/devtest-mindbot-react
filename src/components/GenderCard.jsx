@@ -1,6 +1,7 @@
 import femaleImage from "../assets/female.png";
 import maleImage from "../assets/male.png";
 import "../style/GenderCard.css";
+import Swal from "sweetalert2";
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 function GenderCard({ result }) {
@@ -8,7 +9,7 @@ function GenderCard({ result }) {
   if (result.name.length > 0) {
     genderImage = result.gender === "female" ? femaleImage : maleImage;
   }
-  return result.probability > 0.1 ? (
+  return result.probability > 0.5 ? (
     <div className="card-container">
       <div className="image-bg-circle">
         <img src={genderImage} alt={genderImage} />
@@ -29,7 +30,7 @@ function GenderCard({ result }) {
               <span className="percent-span6">Probability:</span>
               <span className="percent-span7"> </span>
               <span className={`percent-span8 ${result.gender}`}>
-                {result.probability * 100}%
+                {(result.probability * 100).toFixed(2)}%
               </span>
             </span>
           </div>
@@ -39,7 +40,8 @@ function GenderCard({ result }) {
   ) : (
     <div className="card-container">
       <div className="name-error">
-        Can not generate gender
+        Can not generate gender of
+        <br />" {result.name} "
         <br />
         Please try other name
       </div>
