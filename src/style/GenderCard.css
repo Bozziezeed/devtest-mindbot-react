@@ -1,0 +1,149 @@
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 59px auto;
+  max-width: 754px;
+  height: 340px;
+  flex-shrink: 0;
+  border-radius: 24px;
+  background: linear-gradient(
+    90deg,
+    #fff 0%,
+    #e75eb8 0.01%,
+    #ff24bd 0.02%,
+    #ff26bd 0.03%,
+    #ff27be 0.04%,
+    #fcc5e9 28.65%,
+    #e0dbad 63.54%,
+    #0d99ff 100%
+  );
+}
+
+.image-bg-circle {
+  background: var(--genderbox, #eaeaea);
+  border-radius: 50%;
+  width: 217px;
+  height: 217px;
+  position: relative;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.image-bg-circle img {
+  margin: 0 10.5px;
+  width: 196px;
+  height: 196px;
+  position: relative;
+}
+.result-card {
+  width: 345px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.result-card .name {
+  color: #ffffff;
+  text-align: center;
+  font: 700 40px "Poppins", sans-serif;
+  position: relative;
+}
+
+.rectangle {
+  background: var(--genderbox, #eaeaea);
+  border-radius: 30px;
+  width: 345px;
+  height: 98px;
+  position: relative;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.percent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  position: relative;
+}
+.percent-span {
+  color: #050505;
+  font: 400 24px "Poppins", sans-serif;
+}
+.percent-span2 {
+  color: #050505;
+  font: 400 18px "Poppins", sans-serif;
+}
+.percent-span3 {
+  color: #050505;
+  font: 400 24px "Poppins", sans-serif;
+}
+.percent-span4 {
+  font: 400 24px "Poppins", sans-serif;
+}
+.percent-span5 {
+  color: #050505;
+  font: 400 24px "Poppins", sans-serif;
+}
+.percent-span6 {
+  color: #050505;
+  font: 400 18px "Poppins", sans-serif;
+}
+.percent-span7 {
+  color: #050505;
+  font: 400 24px "Poppins", sans-serif;
+}
+.percent-span8 {
+  font: 400 24px "Poppins", sans-serif;
+}
+
+.female {
+  color: #ff24bd;
+}
+.male {
+  color: #0d99ff;
+}
+
+.name-error {
+  color: #ffffff;
+  text-align: center;
+  font: 700 40px "Poppins", sans-serif;
+  position: relative;
+}
+
+@media screen and (max-width: 700px) {
+  .card-container {
+    max-width: 320px;
+    max-height: 320px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .image-bg-circle {
+    width: 120px;
+    height: 120px;
+  }
+  .image-bg-circle img {
+    margin-top: 12px;
+    width: 96px;
+    height: 96px;
+  }
+  .result-card {
+    width: 300px !important;
+    gap: 2.5px !important;
+    justify-content: center;
+    align-items: center;
+  }
+  .result-card .name {
+    font-size: 32px !important;
+  }
+  .rectangle {
+    background: var(--genderbox, #eaeaea);
+    border-radius: 30px;
+    width: 290px;
+    height: 80px;
+  }
+  .name-error {
+    font-size: 32px !important;
+  }
+}
