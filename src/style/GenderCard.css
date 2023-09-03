@@ -2,22 +2,12 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 59px auto;
+  margin: 40px auto;
   max-width: 754px;
   height: 340px;
   flex-shrink: 0;
   border-radius: 24px;
-  background: linear-gradient(
-    90deg,
-    #fff 0%,
-    #e75eb8 0.01%,
-    #ff24bd 0.02%,
-    #ff26bd 0.03%,
-    #ff27be 0.04%,
-    #fcc5e9 28.65%,
-    #e0dbad 63.54%,
-    #0d99ff 100%
-  );
+  background: linear-gradient(90deg, var(--main-color));
 }
 
 .image-bg-circle {
@@ -150,5 +140,8 @@
   }
   .name-error {
     font-size: 32px !important;
+  }
+  .card-container {
+    background: linear-gradient(0deg, var(--main-color));
   }
 }

@@ -1,7 +1,6 @@
 import femaleImage from "../assets/female.png";
 import maleImage from "../assets/male.png";
 import "../style/GenderCard.css";
-import Swal from "sweetalert2";
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 function GenderCard({ result }) {
@@ -40,10 +39,12 @@ function GenderCard({ result }) {
   ) : (
     <div className="card-container">
       <div className="name-error">
-        Can not generate gender of
-        <br />" {result.name} "
-        <br />
-        Please try other name
+        <span>
+          Can not generate gender of
+          <br />" {result.name} "
+          <br />
+          Please try other name
+        </span>
       </div>
     </div>
   );

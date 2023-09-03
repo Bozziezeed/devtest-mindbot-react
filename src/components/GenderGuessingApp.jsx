@@ -21,11 +21,10 @@ function GenderGuessingApp() {
       });
 
       try {
+        const URL = import.meta.env.VITE_API_URL;
         const results = await Promise.all(
           names.map(async (name) => {
-            const response = await axios.get(
-              `${import.meta.env.VITE_API_URL}${name}`
-            );
+            const response = await axios.get(`${URL}${name}`);
             return response.data;
           })
         );
@@ -51,12 +50,11 @@ function GenderGuessingApp() {
 
   return (
     <div className="container">
-      <h1>Guess Gender ?</h1>
+      <h1>Gender Guessing ?</h1>
       <form onSubmit={handleGuessGender} className="input">
         <input
           type="text"
           placeholder="Guess the gender of your name"
-          value={name}
           onChange={handleNameChange}
           className="textfield"
         />

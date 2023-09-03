@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+:root {
+  --main-color: #fff 0%, #e75eb8 0.01%, #ff24bd 0.02%, #fcc5e9 28.65%,
+    #e0dbad 63.54%, #0d99ff 100%;
+  --genderbox: #eaeaea;
+  --background: #050505;
+}
 * {
   margin: 0;
   padding: 0;
