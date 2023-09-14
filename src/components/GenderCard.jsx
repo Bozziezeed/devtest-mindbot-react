@@ -8,6 +8,7 @@ function GenderCard({ result }) {
   if (result.name.length > 0) {
     genderImage = result.gender === "female" ? femaleImage : maleImage;
   }
+
   return result.probability > 0.5 ? (
     <div className="card-container">
       <div className="image-bg-circle">
